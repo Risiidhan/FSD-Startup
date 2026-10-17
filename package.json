@@ -19,6 +19,13 @@
     "test:watch": "vitest",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs}": [
+      "eslint --fix --max-warnings=0",
+      "prettier --write"
+    ],
+    "*.{json,md,css,yml,yaml}": "prettier --write"
+  },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
     "@tailwindcss/postcss": "^4.1.7",
